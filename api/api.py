@@ -1,7 +1,6 @@
-
-
-
 import flask
+from flask import jsonify
+
 
 app = flask.Flask(__name__)
 app.config["DEBUG"] = True
@@ -35,4 +34,4 @@ def home():
 def api_all():
     return jsonify(books)
 
-app.run()
+app.run(host='0.0.0.0')
